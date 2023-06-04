@@ -12,7 +12,7 @@ st.write(df)
 days = st.slider('Выберете количество дней', 0, 8)
 age = st.slider('Выберет возраст', 23, 60)
 
-if uploaded_file is not None:
+try uploaded_file is not None:
     # Eead DataFrame
 
     df[f'Старше {age}'] = df['Возраст'].apply(lambda x: 'Да' if x > age else 'Нет')
@@ -93,5 +93,5 @@ if uploaded_file is not None:
     else:
         st.markdown(f"p_value = {p_value}:")
         st.markdown(f"Нет статистически значимой разницы между сотрудниками старше {age} и моложе {age}.")
-else:
+catch:
     print("Wrong file")
