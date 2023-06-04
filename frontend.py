@@ -10,7 +10,7 @@ uploaded_file = st.file_uploader('Choose file')
 df = pd.read_csv(uploaded_file)
 st.write(df)
 days = st.slider('Выберете количество дней', 0, 8)
-age = st.slider('Выберет возраст', 23, 60)
+age = st.slider('Выберете возраст', 23, 60)
 
 try:
     # Eead DataFrame
